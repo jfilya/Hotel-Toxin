@@ -42,8 +42,8 @@ a {
   cursor: pointer;
   color: #1f204180;
 }
-.activehtml{
-  color:#bc9cff;
+.activehtml {
+  color: #bc9cff;
   font-weight: bold;
 }
 ul,
@@ -180,7 +180,7 @@ p {
         input {
           width: 150px;
           height: 44px;
-          &::placeholder{
+          &::placeholder {
             color: rgba(31, 32, 65, 0.75);
           }
         }
@@ -202,7 +202,7 @@ p {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      span{
+      span {
         color: rgba(31, 32, 65, 0.75);
       }
     }
@@ -307,29 +307,74 @@ footer {
     }
   }
 }
-.underfined{
+.underfined {
   background: url(../img/BG2.png);
   background-size: cover;
   padding: 200px 0;
   text-align: center;
-  &__info{
-    p{
+  &__info {
+    p {
       margin-bottom: 50px;
       font-size: 4vh;
     }
-    &__loading{
-      animation: 2s  linear 0s normal none infinite running rot;
+    &__loading {
+      animation: 2s linear 0s normal none infinite running rot;
     }
   }
 }
-@keyframes rot{
-  0%{
+@keyframes rot {
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+  50% {
     transform: rotate(180deg);
   }
-  0%{
+  0% {
     transform: rotate(360deg);
+  }
+}
+.entering {
+  padding: 172px 0;
+  display: flex;
+  justify-content: center;
+}
+.entrance {
+  width: 380px;
+  height: 358px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 32px 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  p {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1f2041;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 320px;
+    height: 44px;
+  }
+  &__mail{
+    margin-bottom: 10px;
+  }
+  &__pass{
+    margin-bottom: 20px;
+  }
+  button{
+    margin-bottom: 30px;
+  }
+  &__reg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+      color:#000;
+    }
   }
 }
