@@ -29,6 +29,11 @@ a {
   color: #1f204180;
 }
 
+.activehtml {
+  color: #bc9cff;
+  font-weight: bold;
+}
+
 ul,
 li {
   list-style-type: none;
@@ -39,7 +44,7 @@ body {
   color: #1f204180;
   font-size: 14px;
   font-weight: 400;
-  min-width: 320px;
+  min-width: 780px;
   position: relative;
   overflow-x: hidden;
   background-color: #fff;
