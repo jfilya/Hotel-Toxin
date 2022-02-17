@@ -307,3 +307,29 @@ footer {
     }
   }
 }
+.underfined{
+  background: url(../img/BG2.png);
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+  &__info{
+    p{
+      margin-bottom: 50px;
+      font-size: 4vh;
+    }
+    &__loading{
+      animation: 2s  linear 0s normal none infinite running rot;
+    }
+  }
+}
+@keyframes rot{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  0%{
+    transform: rotate(360deg);
+  }
+}

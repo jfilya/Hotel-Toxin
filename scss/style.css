@@ -129,7 +129,6 @@ p {
 .navigation__list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 .navigation__list li {
   margin-right: 20px;
@@ -321,4 +320,43 @@ footer {
 }
 .copyright__social li:last-child {
   margin-right: 0px;
+}
+
+.underfined {
+  background: url(../img/BG2.png);
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+}
+.underfined__info p {
+  margin-bottom: 50px;
+  font-size: 4vh;
+}
+.underfined__info__loading {
+  -webkit-animation: 2s linear 0s normal none infinite running rot;
+          animation: 2s linear 0s normal none infinite running rot;
+}
+
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
