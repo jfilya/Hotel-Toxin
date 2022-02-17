@@ -40,6 +40,7 @@ button {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: #1f204180;
 }
 ul,
 li {
@@ -47,7 +48,7 @@ li {
 }
 body {
   font-family: "Montserrat", serif;
-  color:#1F204180;
+  color: #1f204180;
   font-size: 14px;
   font-weight: 400;
   min-width: 320px;
@@ -57,7 +58,19 @@ body {
 }
 input {
   outline: none;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px;
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.25);
+    font-family: Montserrat;
+  }
 }
+
 button {
   cursor: pointer;
   outline: none;
@@ -71,6 +84,10 @@ button {
 }
 header {
   padding: 15px 0;
+}
+p {
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
 }
 .btn {
   font-weight: bold;
@@ -93,23 +110,196 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     li {
       margin-right: 20px;
-      a{
-          line-height: 17px;
+      a {
+        line-height: 17px;
       }
       &:last-child {
         margin-right: 0px;
       }
-      svg{
-          margin-left: 6px;
+      svg {
+        margin-left: 6px;
       }
-      &:hover{
-          transition: .3s ease;
-          transform:scale(1.1);
+    }
+  }
+}
+.middle {
+  background: url(../img/BG.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 70px 0 18px 0;
+}
+.scaning {
+  width: 380px;
+  height: 374px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 320px;
+  h2 {
+    color: #1f2041;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 224px;
+  label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 5px;
+  }
+  &__scan {
+    display: flex;
+    justify-content: space-between;
+    &__in {
+      &-enter {
+        display: flex;
+        position: relative;
+        input {
+          width: 150px;
+          height: 44px;
+          &::placeholder{
+            color: rgba(31, 32, 65, 0.75);
+          }
+        }
+        button {
+          position: absolute;
+          right: 10%;
+          top: 35%;
+        }
+      }
+    }
+  }
+  &__friend {
+    &__sum {
+      width: 320px;
+      height: 44px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 4px;
+      padding: 13px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        color: rgba(31, 32, 65, 0.75);
+      }
+    }
+  }
+}
+.btnchoice {
+  width: 320px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &__arrow {
+    position: absolute;
+    right: 13px;
+  }
+}
+.text {
+  display: flex;
+  justify-content: flex-end;
+  p {
+    width: 260px;
+    text-align: right;
+  }
+}
+footer {
+  padding: 100px 0 26px 0;
+}
+.lower {
+  margin-bottom: 101px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  &__logo {
+    svg {
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 260px;
+    }
+  }
+  &__navigation {
+    li {
+      margin-bottom: 20px;
+      &:first-child {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: #1f2041;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+      }
+    }
+  }
+  &__subscription {
+    &__head {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: #1f2041;
+      text-transform: uppercase;
+      margin-bottom: 21px;
+    }
+    &__text {
+      max-width: 245px;
+      margin-bottom: 20px;
+    }
+    &__entry {
+      position: relative;
+      &-regist {
+        height: 44px;
+        width: 260px;
+      }
+      button {
+        position: absolute;
+        right: 5%;
+        top: 26%;
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 25px;
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__social {
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0px;
       }
     }
   }
