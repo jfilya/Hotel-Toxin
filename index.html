@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=380, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="scss/style.css" />
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,9 +95,9 @@
             </defs>
           </svg></a>
           <ul class="navigation__list">
-            <li><a class="activehtml" href="./index.html">О&nbsp;нас</a></li>
+            <li><a class="activelist" href="./index.html">О&nbsp;нас</a></li>
             <li>
-              <a href="./list.html"
+              <a class="activelist" href="./list.html"
                 >Услуги<svg
                   width="12"
                   height="8"
@@ -113,10 +113,10 @@
                 </svg>
               </a>
             </li>
-            <li><a href="./list.html">Вакансии</a></li>
-            <li><a href="./list.html">Новости</a></li>
+            <li><a class="activelist" href="./list.html">Вакансии</a></li>
+            <li><a class="activelist" href="./list.html">Новости</a></li>
             <li>
-              <a href="./list.html"
+              <a class="activelist" href="./list.html"
                 >Соглашения<svg
                   width="12"
                   height="8"
@@ -132,8 +132,10 @@
                 </svg>
               </a>
             </li>
-            <li><a class="btn btnenter" href="./enter.html">войти</a></li>
-            <li><a class="btn" href="./register.html">зарегистрироваться</a></li>
+            <li>
+              <a class="btn btnenter" href="./enter.html">войти</a></li>
+            <li>
+              <a class="btn" href="./register.html">зарегистрироваться</a></li>
           </ul>
         </nav>
       </div>
@@ -189,9 +191,8 @@
             </div>
             <div class="search__friend">
               <label>гости</label>
-              <div class="search__friend__sum">
-                <span>Сколько гостей</span>
-                <svg
+              <input class="search__friend__sum" type="text" placeholder="Сколько гостей" readonly>
+              <div class="search__friend__arrow"><svg
                   width="13"
                   height="8"
                   viewBox="0 0 13 8"
@@ -203,8 +204,61 @@
                     fill="#1F2041"
                     fill-opacity="0.5"
                   />
-                </svg>
-              </div>
+                </svg></div>
+                  <div class="dropdown">
+                    <div class="dropdown__people">
+                      <p>взрослые</p>
+                      <div class="dropdown__people__sum">
+                        <div class="plus" id="plus-1"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </div>
+                        <span id="numb-1">0</span>
+                        <div class="minus" id="minus-1"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="dropdown__people">
+                      <p>дети</p>
+                      <div class="dropdown__people__sum">
+                        <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </div>
+                        <span>0</span>
+                        <div class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="dropdown__people dropdown__last">
+                      <p>младенцы</p>
+                      <div class="dropdown__people__sum">
+                        <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </div>
+                        <span>0</span>
+                        <divbutton class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                          </svg>
+                          </divbutton>
+                      </div>
+                    </div>
+                    <div class="dropdown__btns">
+                      <div class="dropdown__btns__btn">очистить</div>
+                      <div class="dropdown__btns__btn">применить</div>
+                    </div>
+                  </div>
             </div>
             <a href="#" class="btn btnchoice"
               >подобрать номер
@@ -315,23 +369,23 @@
           </div>
           <ul class="lower__navigation">
             <li>навигация</li>
-            <li><a href="./index.html">О&nbsp;нас</a></li>
-            <li><a href="./list.html">Новости</a></li>
-            <li><a href="./list.html">Служба&nbsp;поддержки</a></li>
-            <li><a href="./list.html">Услуги</a></li>
+            <li><a class="activelist" href="./index.html">О&nbsp;нас</a></li>
+            <li><a class="activelist" href="./list.html">Новости</a></li>
+            <li><a class="activelist" href="./list.html">Служба&nbsp;поддержки</a></li>
+            <li><a class="activelist" href="./list.html">Услуги</a></li>
           </ul>
           <ul class="lower__navigation">
             <li>о&nbsp;нас</li>
-            <li><a href="./list.html">О&nbsp;сервисе</a></li>
-            <li><a href="./list.html">Наша&nbsp;команда</a></li>
-            <li><a href="./list.html">Вакансии</a></li>
-            <li><a href="./list.html">Инвесторы</a></li>
+            <li><a class="activelist" href="./list.html">О&nbsp;сервисе</a></li>
+            <li><a class="activelist" href="./list.html">Наша&nbsp;команда</a></li>
+            <li><a class="activelist" href="./list.html">Вакансии</a></li>
+            <li><a class="activelist" href="./list.html">Инвесторы</a></li>
           </ul>
           <ul class="lower__navigation">
             <li>Служба поддержки</li>
-            <li><a href="./list.html">Соглашения</a></li>
-            <li><a href="./list.html">Сообщества</a></li>
-            <li><a href="./list.html">Связь&nbsp;с&nbsp;нами</a></li>
+            <li><a class="activelist" href="./list.html">Соглашения</a></li>
+            <li><a class="activelist" href="./list.html">Сообщества</a></li>
+            <li><a class="activelist" href="./list.html">Связь&nbsp;с&nbsp;нами</a></li>
           </ul>
           <div class="lower__subscription">
             <p class="lower__subscription__head">Подписка</p>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=380, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="scss/style.css" />
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,9 +95,9 @@
                   </defs>
                 </svg></a>
                 <ul class="navigation__list">
-                  <li><a class="activehtml" href="./index.html">О&nbsp;нас</a></li>
+                  <li><a class="activelist" href="./index.html">О&nbsp;нас</a></li>
                   <li>
-                    <a href="./list.html"
+                    <a class="activelist" href="./list.html"
                       >Услуги<svg
                         width="12"
                         height="8"
@@ -113,10 +113,10 @@
                       </svg>
                     </a>
                   </li>
-                  <li><a href="./list.html">Вакансии</a></li>
-                  <li><a href="./list.html">Новости</a></li>
+                  <li><a class="activelist" href="./list.html">Вакансии</a></li>
+                  <li><a class="activelist" href="./list.html">Новости</a></li>
                   <li>
-                    <a href="./list.html"
+                    <a class="activelist" href="./list.html"
                       >Соглашения<svg
                         width="12"
                         height="8"
@@ -145,14 +145,16 @@
                     <input class="entrance__mail" type="text" placeholder="Имя">
                     <input class="entrance__mail" type="text" placeholder="Фамилия">
                     <div class="registr__radio">
-                        <div class="registr__radio__people">
-                            <input class="registr__radio__people-circle" type="radio">
-                            <label>Мужчина</label>
-                        </div>
-                        <div class="registr__radio__people">
-                            <input class="registr__radio__people-circle" type="radio">
-                            <label>Женщина</label>
-                        </div>
+                        <label class="registr__radio__people">
+                            <input class="registr__radio__people-circle circle" type="radio" name="gender">
+                            <div class="registr__radio__people-imitation imitation"></div>
+                            <span>Мужчина</span>
+                        </label>
+                        <label class="registr__radio__people">
+                            <input class="registr__radio__people-circle circle" type="radio" name="gender">
+                            <div class="registr__radio__people-imitation imitation"></div>
+                            <span>Женщина</span>
+                        </label>
                     </div>
                     <div class="registr__date">
                         <label class="registr__date__name">дата рождения</label>
@@ -163,9 +165,12 @@
                         <input class="entrance__mail" type="email" placeholder="Email">
                         <input type="password" class="entrance__pass" placeholder="Пароль">
                     </div>
-                    <div class="registr__radio__people registr__radio__check">
-                        <input class="registr__radio__check-checked" type="checkbox">
-                        <label>Получать спецпредложения</label>
+                    <div class="registr__radio__people registr__check">  
+                        <label class="registr__check__checked">
+                          <input class="registr__check__checked-box checkbox" type="checkbox">
+                          <div class="registr__check__checked-fake fake"></div>
+                          <span>Получать спецпредложения</span>
+                          </label>
                     </div>
                     <button type="submit" class="btn btnchoice"
                     >зарегистрироваться
@@ -184,8 +189,8 @@
                     </svg>
                   </button>
                   <div class="entrance__reg">
-                      <span>Нет аккаунта на Toxin?</span>
-                      <a class="btn btnenter" href="./register.html">создать</a>
+                      <span>Уже есть аккаунт на Toxin</span>
+                      <a class="btn btnenter" href="./register.html">войти</a>
                   </div>
                 </form>
               </div>               
@@ -270,7 +275,6 @@
                           </linearGradient>
                         </defs>
                       </svg></a>
-
                   <p>
                     Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
                     «Отельные взгляды»
@@ -278,23 +282,23 @@
                 </div>
                 <ul class="lower__navigation">
                   <li>навигация</li>
-                  <li><a href="./index.html">О&nbsp;нас</a></li>
-                  <li><a href="./list.html">Новости</a></li>
-                  <li><a href="./list.html">Служба&nbsp;поддержки</a></li>
-                  <li><a href="./list.html">Услуги</a></li>
+                  <li><a class="activelist" href="./index.html">О&nbsp;нас</a></li>
+                  <li><a class="activelist" href="./list.html">Новости</a></li>
+                  <li><a class="activelist" href="./list.html">Служба&nbsp;поддержки</a></li>
+                  <li><a class="activelist" href="./list.html">Услуги</a></li>
                 </ul>
                 <ul class="lower__navigation">
                   <li>о&nbsp;нас</li>
-                  <li><a href="./list.html">О&nbsp;сервисе</a></li>
-                  <li><a href="./list.html">Наша&nbsp;команда</a></li>
-                  <li><a href="./list.html">Вакансии</a></li>
-                  <li><a href="./list.html">Инвесторы</a></li>
+                  <li><a class="activelist" href="./list.html">О&nbsp;сервисе</a></li>
+                  <li><a class="activelist" href="./list.html">Наша&nbsp;команда</a></li>
+                  <li><a class="activelist" href="./list.html">Вакансии</a></li>
+                  <li><a class="activelist" href="./list.html">Инвесторы</a></li>
                 </ul>
                 <ul class="lower__navigation">
                   <li>Служба поддержки</li>
-                  <li><a href="./list.html">Соглашения</a></li>
-                  <li><a href="./list.html">Сообщества</a></li>
-                  <li><a href="./list.html">Связь&nbsp;с&nbsp;нами</a></li>
+                  <li><a class="activelist" href="./list.html">Соглашения</a></li>
+                  <li><a class="activelist" href="./list.html">Сообщества</a></li>
+                  <li><a class="activelist" href="./list.html">Связь&nbsp;с&nbsp;нами</a></li>
                 </ul>
                 <div class="lower__subscription">
                   <p class="lower__subscription__head">Подписка</p>
