@@ -10,4 +10,3 @@ dropFriend.addEventListener('click', () => {
 });
 };
 activeWindiw();
-
