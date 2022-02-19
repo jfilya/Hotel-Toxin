@@ -385,6 +385,7 @@ footer {
   justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
 }
 .lower__logo svg {
   margin-bottom: 20px;
