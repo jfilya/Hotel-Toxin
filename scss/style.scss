@@ -642,6 +642,15 @@ footer {
     }
   }
 }
+
+@media (max-width: 1024px){
+    .lower{
+      &__navigation1{
+        display: none;
+      }
+    }
+}
+
 @media (max-width: 576px){
   .lower{
     &__subscription{

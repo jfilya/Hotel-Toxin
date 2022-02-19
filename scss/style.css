@@ -705,6 +705,11 @@ footer {
     display: none;
   }
 }
+@media (max-width: 1024px) {
+  .lower__navigation1 {
+    display: none;
+  }
+}
 @media (max-width: 576px) {
   .lower__subscription {
     display: none;
