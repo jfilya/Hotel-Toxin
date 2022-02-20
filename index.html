@@ -12,7 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="dist/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="dist/datepicker.min.js"></script>
     <title>Toxin отель</title>
   </head>
   <body>
@@ -196,7 +197,8 @@
               <div class="search__scan__in">
                 <label>прибытие</label>
                 <div class="search__scan__in-enter">
-                  <input placeholder="ДД.ММ.ГГГГ"/>
+                  <!-- <input placeholder="ДД.ММ.ГГГГ"/> -->
+                  <input type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here"/>
                   <button>
                     <svg
                       width="12"
@@ -575,5 +577,6 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/date.js"></script>
   </body>
 </html>

@@ -280,15 +280,11 @@ p {
 }
 
 .dropdown {
-  border: 1px solid rgba(31, 32, 65, 0.5);
   position: absolute;
-  padding: 6px 6px 12px 14px;
   width: 318px;
-  height: 159px;
+  height: 0px;
+  overflow-y: hidden;
   background: #ffffff;
-  border-radius: 4px;
-  display: none;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   z-index: 1;
   top: 97%;
 }
@@ -349,7 +345,11 @@ p {
 }
 
 .freand-active {
-  display: block;
+  height: 159px;
+  padding: 6px 6px 12px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   transition: 0.4s;
 }
 
@@ -376,11 +376,11 @@ p {
 }
 
 footer {
-  padding: 100px 0 26px 0;
+  padding-bottom: 26px;
 }
 
 .lower {
-  margin-bottom: 101px;
+  padding: 101px 0;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -665,7 +665,7 @@ footer {
     text-align: center;
     right: 0%;
     width: 100%;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     z-index: 4;
@@ -705,12 +705,31 @@ footer {
     display: none;
   }
 }
-@media (max-width: 1024px) {
+.room {
+  background: url(../img/room.jpg);
+  background-size: cover;
+  height: 645px;
+}
+
+.details-room {
+  padding: 70px 0;
+}
+
+.lines {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1440px) {
+  .room {
+    height: 485px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .lower__navigation1 {
     display: none;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .lower__subscription {
     display: none;
   }
