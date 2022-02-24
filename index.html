@@ -18,6 +18,7 @@
   </head>
   <body>
     <header>
+      <div class="overlay"></div>
       <div class="container header">
         <nav class="navigation">
           <a href="./index.html"><svg
@@ -189,6 +190,7 @@
       </nav>
     </header>
     <section class="middle">
+
       <div class="container">
         <div class="scaning">
           <h2>Найдём номера под ваши пожелания</h2>
@@ -197,7 +199,7 @@
               <div class="search__scan__in">
                 <label>прибытие</label>
                 <div class="search__scan__in-enter">
-                  <input name="startDate" placeholder="ДД.ММ.ГГГГ">
+                  <input id="datepicker" name="startDate" placeholder="ДД.ММ.ГГГГ">
                   <button>
                     <svg
                       width="12"
@@ -240,8 +242,9 @@
             <div class="search__friend">
               <label>гости</label>
               <div>
-               <input class="search__friend__sum" type="text" placeholder="Сколько гостей" readonly> 
-               <svg class="search__friend__arrow"
+               <input id="friend" class="search__friend__sum" type="text" placeholder="Сколько гостей"> 
+               <label for="friend">
+              <svg class="search__friend__arrow"
                width="13"
                height="8"
                viewBox="0 0 13 8"
@@ -254,18 +257,21 @@
                  fill-opacity="0.5"
                />
              </svg>
+            </label>
               </div>
                   <div class="dropdown">
                     <div class="dropdown__people">
                       <p>взрослые</p>
                       <div class="dropdown__people__sum">
-                        <div class="minus" id="minus-1"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="minus">
+                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
                           <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
                           </svg>
                           </div>
                         <input class="result" id="result-1" type="text" placeholder="0" value="0">
-                        <div class="plus" id="plus-1"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="plus">
+                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
                           <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
                           </svg>
@@ -305,12 +311,12 @@
                       </div>
                     </div>
                     <div class="dropdown__btns">
-                      <div class="dropdown__btns__btn">очистить</div>
-                      <div class="dropdown__btns__btn">применить</div>
+                      <div id="clear" class="dropdown__btns__btn">очистить</div>
+                      <div id="apply" class="dropdown__btns__btn">применить</div>
                     </div>
                   </div>
             </div>
-            <a href="#" class="btn btnchoice"
+            <a href="./filter.html" class="btn btnchoice"
               >подобрать номер
               <svg
                 class="btnchoice__arrow"
@@ -575,6 +581,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
     <script src="js/check.js"></script>
     <script src="js/main.js"></script>
     <script src="js/date.js"></script>
