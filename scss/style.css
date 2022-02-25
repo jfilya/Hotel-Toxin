@@ -245,12 +245,16 @@ p {
   display: flex;
   justify-content: space-between;
 }
+.search__scan__in {
+  width: 100%;
+}
 .search__scan__in-enter {
   display: flex;
   position: relative;
 }
 .search__scan__in-enter input {
-  width: 150px;
+  cursor: pointer;
+  width: 318px;
   height: 44px;
 }
 .search__scan__in-enter input::-moz-placeholder {
@@ -262,10 +266,11 @@ p {
 .search__scan__in-enter input::placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
-.search__scan__in-enter button {
+.search__scan__in-enter label {
   position: absolute;
-  right: 10%;
-  top: 35%;
+  right: 15px;
+  top: 16px;
+  cursor: pointer;
 }
 .search__friend {
   position: relative;
@@ -311,6 +316,7 @@ p {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 6px;
+  height: 31px;
 }
 .dropdown__people p {
   font-weight: bold;
