@@ -14,4 +14,3 @@ const closeModel = () => {
 overlay.addEventListener('click', closeModel);
 close.addEventListener('click', closeModel);
 activeWindow();
-
