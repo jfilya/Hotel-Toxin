@@ -1,6 +1,7 @@
 .datepicker {
   display: inline-block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
 }
 
 .datepicker table {

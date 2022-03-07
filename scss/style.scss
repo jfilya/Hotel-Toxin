@@ -29,6 +29,18 @@ a {
 }
 .activelist {
   transition: 0.2s;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: #1f204180; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s;
+  }
   &:hover {
     color: #bc9cff;
     svg {
@@ -36,6 +48,17 @@ a {
         fill: #bc9cff;
         fill-opacity: 1;
       }
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 1px; /* Высота линии */
+      background-color: #bc9cff; /* Цвет подчеркивания при появлении линии*/
+      transition: width 0.5s;
     }
   }
 }
@@ -81,8 +104,8 @@ button {
   font-family: "Montserrat";
 }
 .container {
-  max-width: 1160px;
-  padding: 0px;
+  max-width: 1180px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 .header {
@@ -91,11 +114,6 @@ button {
 .shadowbox {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
-// header,
-// section,
-// footer {
-//   width: 100%;
-// }
 p {
   color: rgba(31, 32, 65, 0.75);
   line-height: 24px;
@@ -214,9 +232,10 @@ p {
       &-enter {
         display: flex;
         position: relative;
+        width: 100%;
         input {
           cursor: pointer;
-          width: 318px;
+          width: 100%;
           height: 44px;
           &::placeholder {
             color: rgba(31, 32, 65, 0.75);
@@ -257,6 +276,7 @@ p {
   height: 100%;
   position: absolute;
   z-index: 1;
+  display: none;
 }
 
 .dropdown {
@@ -930,11 +950,6 @@ h6 {
     transform: rotate(-360deg);
   }
 }
-#overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 .rooms {
   display: flex;
   justify-content: space-between;
@@ -1016,9 +1031,9 @@ h6 {
   }
 }
 @media screen and (max-width: 1280px) {
-  .container {
-    width: 1025px;
-  }
+  // .container {
+  //   width: 1025px;
+  // }
   .info {
     &__head {
       &__left {
@@ -1031,9 +1046,9 @@ h6 {
   }
 }
 @media screen and (max-width: 1024px) {
-  .container {
-    width: 960px;
-  }
+  // .container {
+  //   width: 960px;
+  // }
   .intelligence {
     margin-bottom: 30px;
   }
@@ -1053,14 +1068,14 @@ h6 {
   }
 }
 @media screen and (max-width: 960px) {
-  .container {
-    width: 768px;
-  }
+  // .container {
+  //   width: 768px;
+  // }
 }
 @media screen and (max-width: 768px) {
-  .container {
-    width: 576px;
-  }
+  // .container {
+  //   width: 576px;
+  // }
   .info {
     &__head {
       display: flex;
@@ -1083,9 +1098,6 @@ h6 {
   }
 }
 @media screen and (max-width: 576px) {
-  .container {
-    width: 380px;
-  }
   .lower {
     &__subscription {
       display: none;
@@ -1127,5 +1139,20 @@ h6 {
   }
   .regulations2 {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .scaning, .entrance, .registr {
+    width: 100%;
+  }
+  .info{
+    &__midd{
+      &__title{
+        span{
+          display: none;
+        }
+      }
+    }
   }
 }
