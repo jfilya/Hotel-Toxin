@@ -1045,6 +1045,9 @@ h6 {
   padding-bottom: 70px;
   &__drop {
     width: 266px;
+    &__search {
+      display: block;
+    }
   }
 }
 .number {
@@ -1127,22 +1130,26 @@ h6 {
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor:pointer;
-      &:hover{
+      cursor: pointer;
+      &:hover {
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
         font-size: bold;
-        color:#fff;
+        color: #fff;
       }
-      &:last-child{
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      &:last-child {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
       }
     }
-    &__active{
+    &__active {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       font-size: bold;
-      color:#fff;
+      color: #fff;
     }
   }
+}
+#aside,
+[for="aside"] {
+  display: none;
 }
 @media screen and (max-width: 1440px) {
   .room {
@@ -1159,6 +1166,14 @@ h6 {
     &__midd {
       max-width: 600px;
     }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .number__hotel {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rooms {
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1186,6 +1201,49 @@ h6 {
   }
 }
 @media screen and (max-width: 960px) {
+  .rooms__drop {
+    display: none;
+  }
+  .number__hotel {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  [for="aside"] {
+    display: block;
+    position: absolute;
+    text-align: center;
+    left: 0%;
+    height: 40px;
+    width: 40px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    z-index: 2;
+    animation: rotate 8s infinite linear;
+    top: 10%;
+    &::before {
+      content: "↺";
+      font-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .rooms__drop {
+    position: absolute;
+    background-color: #fff;
+    left: 0%;
+    padding: 40px;
+    width: 310px;
+  }
+  #aside:checked + label + aside {
+    display: block;
+    animation: show 0.5s ease;
+  }
+}
+@media screen and (max-width: 850px) {
+  .number__hotel {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 768px) {
   .info {
@@ -1252,13 +1310,18 @@ h6 {
   .regulations2 {
     max-width: 100%;
   }
+  .number__hotel {
+    grid-template-columns: 270px;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .scaning,
   .entrance,
   .registr,
-  .detailsroom {
+  .detailsroom,
+  .rooms__drop {
     width: 100%;
   }
   .info {
