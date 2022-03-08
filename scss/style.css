@@ -1296,20 +1296,8 @@ h6 {
     left: 0%;
     height: 40px;
     width: 40px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 50%;
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
     z-index: 2;
-    -webkit-animation: rotate 8s infinite linear;
-            animation: rotate 8s infinite linear;
     top: 10%;
-  }
-  [for=aside]::before {
-    content: "↺";
-    font-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 
   .rooms__drop {
@@ -1324,6 +1312,11 @@ h6 {
     display: block;
     -webkit-animation: show 0.5s ease;
             animation: show 0.5s ease;
+  }
+
+  #aside:checked + label {
+    transform: rotate(180deg);
+    transition: 0.2s;
   }
 }
 @media screen and (max-width: 850px) {
