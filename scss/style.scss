@@ -978,7 +978,7 @@ h6 {
       }
     }
   }
-  &__search{
+  &__search {
     margin-bottom: 20px;
   }
   &__friend {
@@ -998,12 +998,12 @@ h6 {
   &__last {
     margin-bottom: 30px;
   }
-  &__important{
+  &__important {
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      background-image:url(../img/vector-i.svg);
+      background-image: url(../img/vector-i.svg);
       width: 20px;
       height: 21px;
       left: 220px;
@@ -1053,6 +1053,7 @@ h6 {
     color: #1f2041;
   }
   &__hotel {
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
@@ -1112,16 +1113,43 @@ h6 {
     align-items: center;
   }
 }
-
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__list {
+    display: flex;
+    margin-bottom: 10px;
+    li {
+      width: 40px;
+      height: 40px;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+      &:hover{
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        font-size: bold;
+        color:#fff;
+      }
+      &:last-child{
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      }
+    }
+    &__active{
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      font-size: bold;
+      color:#fff;
+    }
+  }
+}
 @media screen and (max-width: 1440px) {
   .room {
     height: 485px;
   }
 }
 @media screen and (max-width: 1280px) {
-  // .container {
-  //   width: 1025px;
-  // }
   .info {
     &__head {
       &__left {
@@ -1141,8 +1169,8 @@ h6 {
     height: 300px;
   }
   .info {
-    &__head{
-      &__left{
+    &__head {
+      &__left {
         max-width: 400px;
       }
     }
@@ -1158,7 +1186,6 @@ h6 {
   }
 }
 @media screen and (max-width: 960px) {
-
 }
 @media screen and (max-width: 768px) {
   .info {
