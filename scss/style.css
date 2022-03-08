@@ -275,7 +275,6 @@ p {
   display: flex;
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
 }
 .search__scan__in-enter input {
   cursor: pointer;
@@ -1057,6 +1056,9 @@ h6 {
   font-size: 12px;
   line-height: 18px;
 }
+.detailsroom__search {
+  margin-bottom: 20px;
+}
 .detailsroom__friend {
   margin-bottom: 15px;
 }
@@ -1214,6 +1216,9 @@ h6 {
     height: 300px;
   }
 
+  .info__head__left {
+    max-width: 400px;
+  }
   .info__midd {
     margin-top: 0px;
   }
