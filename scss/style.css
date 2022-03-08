@@ -261,6 +261,7 @@ p {
   line-height: 15px;
   text-transform: uppercase;
   color: #1f2041;
+  display: flex;
   margin-bottom: 5px;
 }
 .search__scan {
@@ -274,6 +275,7 @@ p {
   display: flex;
   position: relative;
   width: 100%;
+  margin-bottom: 20px;
 }
 .search__scan__in-enter input {
   cursor: pointer;
@@ -1021,6 +1023,90 @@ h6 {
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
 }
+.detailsroom__detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.detailsroom__detail__num {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+.detailsroom__detail__num-numb {
+  font-size: 14px;
+  line-height: 17px;
+}
+.detailsroom__detail__num-lux {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+  padding-left: 8px;
+}
+.detailsroom__detail__price {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.detailsroom__detail__price span {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+.detailsroom__friend {
+  margin-bottom: 15px;
+}
+.detailsroom__extrainfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  color: rgba(31, 32, 65, 0.75);
+  margin-bottom: 15px;
+}
+.detailsroom__extrainfo p {
+  max-width: 214px;
+  line-height: 18px;
+}
+.detailsroom__last {
+  margin-bottom: 30px;
+}
+.detailsroom__important {
+  position: relative;
+}
+.detailsroom__important::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/vector-i.svg);
+  width: 20px;
+  height: 21px;
+  left: 220px;
+  top: -2px;
+}
+.detailsroom__finish {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+  margin-bottom: 20px;
+  position: relative;
+}
+.detailsroom__finish::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  border: 1px dashed rgba(31, 32, 65, 0.25);
+  width: 56%;
+  left: 60px;
+}
+.detailsroom__btn {
+  padding: 15px 0;
+}
 
 @-webkit-keyframes rotate {
   100% {
@@ -1207,7 +1293,10 @@ h6 {
   }
 }
 @media screen and (max-width: 420px) {
-  .scaning, .entrance, .registr {
+  .scaning,
+.entrance,
+.registr,
+.detailsroom {
     width: 100%;
   }
 
