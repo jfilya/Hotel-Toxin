@@ -1342,12 +1342,19 @@ h6 {
 .homedynamic__title {
   cursor: pointer;
 }
+.homedynamic__title__arrow {
+  margin-left: 28px;
+}
 .homedynamic__dinam {
   display: none;
 }
 
 .freand-active {
   display: block;
+}
+
+.rotate-arrow {
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1440px) {

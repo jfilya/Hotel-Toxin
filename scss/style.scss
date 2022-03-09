@@ -1259,6 +1259,9 @@ h6 {
 .homedynamic{
   &__title{
     cursor:pointer;
+    &__arrow{
+      margin-left: 28px;
+    }
   }
   &__dinam{
     display: none;
@@ -1266,6 +1269,9 @@ h6 {
 }
 .freand-active {
   display: block;
+}
+.rotate-arrow{
+  transform: rotate(180deg);
 }
 @media screen and (max-width: 1440px) {
   .room {
@@ -1353,6 +1359,7 @@ h6 {
     transition: 0.2s;
   }
 }
+
 @media screen and (max-width: 850px) {
   .number__hotel {
     grid-template-columns: 1fr 1fr;
