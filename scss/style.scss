@@ -1202,7 +1202,7 @@ h6 {
   &__option {
     display: flex;
     align-items: start;
-    cursor:pointer;
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
@@ -1256,21 +1256,24 @@ h6 {
 .home__option__real:checked + .home__option__fake::before {
   opacity: 1;
 }
-.homedynamic{
-  &__title{
-    cursor:pointer;
-    &__arrow{
-      margin-left: 28px;
+.homedynamic {
+  &__title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__arrow {
+      margin-right: 14px;
     }
   }
-  &__dinam{
+  &__dinam {
     display: none;
   }
 }
 .freand-active {
   display: block;
 }
-.rotate-arrow{
+.rotate-arrow {
   transform: rotate(180deg);
 }
 @media screen and (max-width: 1440px) {
