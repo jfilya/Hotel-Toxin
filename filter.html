@@ -189,6 +189,8 @@
 
 
 
+
+
           <input type="checkbox" id="aside">
           <label for="aside">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +207,7 @@
             </label>
             <aside class="rooms__drop">
               <form class="search rooms__drop__search">
-                <div class="search__scan detailsroom__search">
+                <div class="search__scan detailsroom__scan__search">
                   <div class="search__scan__in">
                     <label>Даты пребывания в отеле</label>
                     <div class="search__scan__in-enter">
@@ -228,7 +230,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="search__friend detailsroom__friend">
+                <div class="search__friend detailsroom__scan__friend detailsroom__scan__friend-filter">
                   <label>гости</label>
                   <div>
                    <input id="friend" class="search__friend__sum" type="text" placeholder="Сколько гостей" readonly> 
@@ -305,16 +307,182 @@
                         </div>
                       </div>
                 </div>
-                <div class="range">
-                  
+                <div class="ranges">
+                  <label class="ranges__diapason"> 
+                    диапазон цены
+                    <span>5 000₽ - 10 000₽</span> 
+                  </label>
+                  <input type="range" class="ranges__inp">
+                  <span>Стоимость за сутки пребывания в номере</span>
                 </div>
-                </form>
+                <div class="home">
+                  <label class="home__title">Правила дома</label>
+                  <label class="home__option">
+                    <input class="home__option__real" type="checkbox">
+                    <div class="home__option__fake"></div>
+                    <span>Можно курить</span>
+                  </label>
+                  <label class="home__option">
+                    <input class="home__option__real" type="checkbox">
+                    <div class="home__option__fake"></div>
+                    <span>Можно с питомцами</span>
+                  </label>
+                  <label class="home__option">
+                    <input class="home__option__real" type="checkbox">
+                    <div class="home__option__fake"></div>
+                    <span class="home__option__people">Можно пригласить гостей (до 10 человек)</span>
+                  </label>
+                </div>
+                <div class="home">
+                  <label class="home__title">доступность</label>
+                  <label class="home__option">
+                    <input class="home__option__real" type="checkbox">
+                    <div class="home__option__fake"></div>
+                    <div class="home__option__name">
+                      <span class="home__option__name-title">Широкий коридор</span>
+                      <span class="home__option__name-text">Ширина коридоров в номере не&nbsp;менее 91 см.</span>
+                  </div>
+                  </label>
+                  <label class="home__option">
+                    <input class="home__option__real" type="checkbox">
+                    <div class="home__option__fake"></div>
+                    <div class="home__option__name">
+                      <span class="home__option__name-title">Помощник для инвалидов</span>
+                      <span class="home__option__name-text">На 1 этаже вас встретит специалист и проводит до номера.</span>
+                  </div>
+                  </label>
+                </div>
+
+                <div class="search__friend detailsroom__scan__friend detailsroom__scan__friend-filter">
+                  <label>удобства номера</label>
+                  <div>
+                   <input id="friend" class="search__friend__sum" type="text" placeholder="2 спальни, 2 кровати" readonly> 
+                   <label for="friend">
+                  <svg class="search__friend__arrow"
+                   width="13"
+                   height="8"
+                   viewBox="0 0 13 8"
+                   fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                 >
+                   <path
+                     d="M11.3301 0.135742L12.7363 1.54199L6.73633 7.54199L0.736328 1.54199L2.14258 0.135742L6.73633 4.72949L11.3301 0.135742Z"
+                     fill="#1F2041"
+                     fill-opacity="0.5"
+                   />
+                 </svg>
+                  </label>
+                  </div>
+                      <div class="dropdown">
+                        <div class="dropdown__people">
+                          <p>спальни</p>
+                          <div class="dropdown__people__sum">
+                            <div class="minus">
+                              <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                            <input class="result" id="result-1" type="text" placeholder="0" value="0">
+                            <div class="plus">
+                              <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="dropdown__people">
+                          <p>кровати</p>
+                          <div class="dropdown__people__sum">
+                            <div class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                              <input class="result" id="result-2" type="text" placeholder="0" value="0">
+                            <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="dropdown__people dropdown__last">
+                          <p>ванные комнаты</p>
+                          <div class="dropdown__people__sum">
+                            <div class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                              <input class="result" id="result-3" type="text" placeholder="0" value="0">
+                            <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
+                              <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
+                              </svg>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="dropdown__btns">
+                          <div id="clear" class="dropdown__btns__btn">очистить</div>
+                          <div id="apply" class="dropdown__btns__btn">применить</div>
+                        </div>
+                      </div>
+                </div>
+
+
+
+                <div class="home homedynamic">
+                  <label class="home__title homedynamic__title">дополнительные удобства 
+                    <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"
+                      fill="#1F2041"
+                      fill-opacity="0.5"
+                    />
+                  </svg></label>
+                  <div class="homedynamic__dinam">
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Завтрак</span>
+                    </label>
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Письменный стол</span>
+                    </label>
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Стул для кормления</span>
+                    </label>
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Кроватка</span>
+                    </label>
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Телевизор</span>
+                    </label>
+                    <label class="home__option">
+                      <input class="home__option__real" type="checkbox">
+                      <div class="home__option__fake"></div>
+                      <span>Шампунь</span>
+                    </label>
+                </div>
+                </div>
+              </form>
             </aside>
-
-
-
-
-
 
 
             <div class="number">
@@ -1078,7 +1246,7 @@
       <script src="js/jquery.min.js"></script>
       <script src="js/check.js"></script>
       <script src="js/main.js"></script>
-  
+      <script src="js/comfort.js"></script>
       <link rel="stylesheet" href="js/datepicker.material.css">
       <script src="js/datepicker.js"></script>
       <script src="js/date.js"></script>   

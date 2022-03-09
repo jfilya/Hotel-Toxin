@@ -217,19 +217,20 @@ p {
   justify-content: space-between;
   height: 224px;
   z-index: 2;
-  label {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1f2041;
-    display: flex;
-    margin-bottom: 5px;
-  }
+
   &__scan {
     display: flex;
     justify-content: space-between;
     &__in {
+      label {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1f2041;
+        display: flex;
+        margin-bottom: 5px;
+      }
       width: 100%;
       &-enter {
         display: flex;
@@ -253,6 +254,15 @@ p {
     }
   }
   &__friend {
+    label {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1f2041;
+      display: flex;
+      margin-bottom: 5px;
+    }
     position: relative;
     &__sum {
       width: 100%;
@@ -346,10 +356,6 @@ p {
   &:active {
     transform: scale(0.9);
   }
-}
-.freand-active {
-  display: block;
-  transition: 0.4s;
 }
 .btnchoice {
   width: 100%;
@@ -979,62 +985,64 @@ h6 {
       }
     }
   }
-  &__scan{
-      &__search {
-    margin-bottom: 20px;
-  }
-  &__friend {
-    margin-bottom: 15px;
-  }
-  &__extrainfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    color: rgba(31, 32, 65, 0.75);
-    margin-bottom: 15px;
-    p {
-      max-width: 214px;
-      line-height: 18px;
+  &__scan {
+    &__search {
+      margin-bottom: 20px;
+    }
+    &__friend {
+      margin-bottom: 15px;
+    }
+    &__extrainfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      color: rgba(31, 32, 65, 0.75);
+      margin-bottom: 15px;
+      p {
+        max-width: 214px;
+        line-height: 18px;
+      }
+    }
+    &__last {
+      margin-bottom: 30px;
+    }
+    &__important {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/vector-i.svg);
+        width: 20px;
+        height: 21px;
+        left: 220px;
+        top: -2px;
+      }
+    }
+    &__finish {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color: #1f2041;
+      margin-bottom: 20px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        border: 1px dashed rgba(31, 32, 65, 0.25);
+        width: 56%;
+        left: 60px;
+      }
+    }
+    &__btn {
+      padding: 15px 0;
+    }
+    &__friend-filter {
+      margin-bottom: 30px;
     }
   }
-  &__last {
-    margin-bottom: 30px;
-  }
-  &__important {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/vector-i.svg);
-      width: 20px;
-      height: 21px;
-      left: 220px;
-      top: -2px;
-    }
-  }
-  &__finish {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 23px;
-    color: #1f2041;
-    margin-bottom: 20px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 6px;
-      border: 1px dashed rgba(31, 32, 65, 0.25);
-      width: 56%;
-      left: 60px;
-    }
-  }
-  &__btn {
-    padding: 15px 0;
-  }
-  }
-
 }
 
 @keyframes rotate {
@@ -1155,6 +1163,110 @@ h6 {
 [for="aside"] {
   display: none;
 }
+.ranges {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  &__diapason {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 20px;
+  }
+  &__inp {
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  span {
+    font-size: 12px;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  &__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 16.5px;
+  }
+  &__option {
+    display: flex;
+    align-items: start;
+    cursor:pointer;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-bottom: 10.5px;
+    &__name {
+      display: flex;
+      flex-direction: column;
+      max-width: 226px;
+      &-title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-bottom: 5px;
+      }
+      &-text {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &__real {
+      display: none;
+    }
+    &__fake {
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border: 1px solid #bc9cff;
+      border-radius: 4px;
+      margin-right: 10px;
+      position: relative;
+      &::before {
+        content: "";
+        background: url(../img/mark.svg);
+        position: absolute;
+        width: 10px;
+        height: 8px;
+        top: 25%;
+        left: 25%;
+        opacity: 0;
+      }
+    }
+    &__people {
+      max-width: 192px;
+    }
+  }
+}
+.home__option__real:checked + .home__option__fake::before {
+  opacity: 1;
+}
+.homedynamic{
+  &__title{
+    cursor:pointer;
+  }
+  &__dinam{
+    display: none;
+  }
+}
+.freand-active {
+  display: block;
+}
 @media screen and (max-width: 1440px) {
   .room {
     height: 485px;
@@ -1235,7 +1347,7 @@ h6 {
     display: block;
     animation: show 0.5s ease;
   }
-  #aside:checked + label{
+  #aside:checked + label {
     transform: rotate(180deg);
     transition: 0.2s;
   }
@@ -1322,7 +1434,7 @@ h6 {
   .entrance,
   .registr,
   .detailsroom,
-  .rooms__drop, 
+  .rooms__drop,
   .dropdown {
     width: 100%;
   }
