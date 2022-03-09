@@ -979,7 +979,8 @@ h6 {
       }
     }
   }
-  &__search {
+  &__scan{
+      &__search {
     margin-bottom: 20px;
   }
   &__friend {
@@ -1032,6 +1033,8 @@ h6 {
   &__btn {
     padding: 15px 0;
   }
+  }
+
 }
 
 @keyframes rotate {
