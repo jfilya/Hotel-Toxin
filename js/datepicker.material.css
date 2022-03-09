@@ -242,3 +242,9 @@ thead {
   height: 44px;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 420px){
+  .datepicker__wrapper{
+    width: 100%;
+  }
+}
