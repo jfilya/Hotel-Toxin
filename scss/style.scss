@@ -1176,6 +1176,11 @@ h6 {
     text-transform: uppercase;
     color: #1f2041;
     margin-bottom: 20px;
+    &__number{
+      font-size: 12px;
+      font-weight: normal;
+      color: rgba(31, 32, 65, 0.5);
+    }
   }
   &__inp {
     margin-bottom: 10px;
