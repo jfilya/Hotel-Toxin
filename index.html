@@ -219,80 +219,44 @@
             </div>
             <div class="search__friend">
               <label>гости</label>
-              <div>
-               <input id="friend" class="search__friend__sum" type="text" placeholder="Сколько гостей" readonly> 
-               <label for="friend">
-              <svg class="search__friend__arrow"
-               width="13"
-               height="8"
-               viewBox="0 0 13 8"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <path
-                 d="M11.3301 0.135742L12.7363 1.54199L6.73633 7.54199L0.736328 1.54199L2.14258 0.135742L6.73633 4.72949L11.3301 0.135742Z"
-                 fill="#1F2041"
-                 fill-opacity="0.5"
-               />
-             </svg>
-              </label>
-              </div>
-                  <div class="dropdown">
-                    <div class="dropdown__people">
-                      <p>взрослые</p>
-                      <div class="dropdown__people__sum">
-                        <div class="minus">
-                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                        <input class="result" id="result-1" type="text" placeholder="0" value="0">
-                        <div class="plus">
-                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="dropdown__people">
-                      <p>дети</p>
-                      <div class="dropdown__people__sum">
-                        <div class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                          <input class="result" id="result-2" type="text" placeholder="0" value="0">
-                        <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="dropdown__people dropdown__last">
-                      <p>младенцы</p>
-                      <div class="dropdown__people__sum">
-                        <div class="minus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M12.6435 16.1216H17.3595V17.2376H12.6435V16.1216Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                          <input class="result" id="result-3" type="text" placeholder="0" value="0">
-                        <div class="plus"><svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.5 15.5576C0.5 7.54949 6.99187 1.05762 15 1.05762C23.0081 1.05762 29.5 7.54949 29.5 15.5576C29.5 23.5657 23.0081 30.0576 15 30.0576C6.99187 30.0576 0.5 23.5657 0.5 15.5576Z" stroke="#1F2041" stroke-opacity="0.25"/>
-                          <path d="M18.9132 15.7976H15.5652V19.0736H14.4312V15.7976H11.0832V14.7356H14.4312V11.4416H15.5652V14.7356H18.9132V15.7976Z" fill="#1F2041" fill-opacity="0.5"/>
-                          </svg>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="dropdown__btns">
-                      <div id="clear" class="dropdown__btns__btn">очистить</div>
-                      <div id="apply" class="dropdown__btns__btn">применить</div>
+              <div class="custom iqdropdown">
+                <p class="iqdropdown-selection"></p>
+                <div class="iqdropdown-menu">
+                  <div
+                    class="iqdropdown-menu-option"
+                    data-id="adult"
+                    data-defaultcount="0"
+                    data-mincount="0"
+                  >
+                    <div>
+                      <p class="iqdropdown-item">взрослые</p>
                     </div>
                   </div>
+                  <div
+                    class="iqdropdown-menu-option"
+                    data-id="minor"
+                    data-defaultcount="0"
+                    data-mincount="0"
+                  >
+                    <div>
+                      <p class="iqdropdown-item">дети</p>
+                    </div>
+                  </div>
+                  <div class="iqdropdown-menu-option" data-id="infant">
+                    <div>
+                      <p class="iqdropdown-item">младенцы</p>
+                    </div>
+                  </div>
+                  <div class="iqdropdown-btn">
+                  <button class="iqdropdown-menu-close">
+                    очистить
+                  </button>
+                  <div class="iqdropdown-menu-yes">
+                    <span>применить</span> 
+                  </div>
+                </div>
+                </div>
+              </div>  
             </div>
             <a href="./filter.html" class="btn btnchoice"
               >подобрать номер
@@ -560,10 +524,10 @@
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>
+    <script src="js/item-quantity-dropdown.min.js"></script>
+    <link rel="stylesheet" href="css/item-quantity-dropdown.min.css">
     <script src="js/check.js"></script>
-    <script src="js/main.js"></script>
-
-    <link rel="stylesheet" href="js/datepicker.material.css">
+    <link rel="stylesheet" href="css/datepicker.material.css">
     <script src="js/datepicker.js"></script>
     <script src="js/date.js"></script>
   </body>

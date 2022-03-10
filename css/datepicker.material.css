@@ -242,3 +242,9 @@ thead {
   height: 44px;
   margin-bottom: 20px;
 }
+.datepicker__title select{
+  font-family: 'Montserrat';
+}
+.datepicker__title select>option:checked{
+  background-color: #bc9cff;
+}
