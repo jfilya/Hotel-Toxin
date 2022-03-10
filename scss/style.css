@@ -1358,6 +1358,10 @@ h6 {
     transform: rotate(180deg);
     transition: 0.2s;
   }
+
+  .homedynamic {
+    height: 295px;
+  }
 }
 @media screen and (max-width: 850px) {
   .number__hotel {
